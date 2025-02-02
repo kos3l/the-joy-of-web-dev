@@ -1,5 +1,4 @@
-import { useState, type ReactNode } from "react";
-import "./Counter.css";
+import { useEffect, useState, type ReactNode } from "react";
 
 export default function Counter({
   children,
@@ -9,9 +8,13 @@ export default function Counter({
   count: number;
 }) {
   const [count, setCount] = useState(initialCount);
-  const add = () => setCount((i) => i + 1);
+  const add = () => setCount((index) => index + 1);
 
-  const subtract = () => setCount((i) => i - 1);
+  const subtract = () => setCount((index) => index - 1);
+  const meme = ["1", "2"];
+  const t = meme.forEach((e) => console.log(e));
+  const e = 2;
+  console.log(t);
 
   return (
     <>

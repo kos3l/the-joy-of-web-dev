@@ -1,7 +1,7 @@
 ---
 // Component Imports
-import Counter from "../components/Counter";
-const someProps = {
+import Counter from "../components/counter";
+const someProperties = {
   count: 0,
 };
 import "../styles/global.css";
@@ -17,9 +17,9 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <main class="bg-green-200">
-      <Counter {...someProps} client:visible>
-        <h1 class="text-amber-300">Hello, React!</h1>
+    <main>
+      <Counter {...someProperties} client:visible>
+        <h1 class="meow">Hello, React!</h1>
       </Counter>
     </main>
   </body>
