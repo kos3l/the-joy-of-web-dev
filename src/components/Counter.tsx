@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import "./Counter.css";
 
 export default function Counter({
   children,
   count: initialCount,
 }: {
-  children: JSX.Element;
+  children: ReactNode;
   count: number;
 }) {
   const [count, setCount] = useState(initialCount);
@@ -20,6 +20,7 @@ export default function Counter({
         <pre>{count}</pre>
         <button onClick={add}>+</button>
       </div>
+      <p className="text-red-500 font-bold">MEOW</p>
       <div className="counter-message">{children}</div>
     </>
   );
