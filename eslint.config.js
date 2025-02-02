@@ -5,6 +5,7 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import tseslint from "typescript-eslint";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import reactHooks from "eslint-plugin-react-hooks";
+import a11yPlugin from "eslint-plugin-jsx-a11y";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -13,6 +14,7 @@ export default [
   pluginJs.configs.recommended,
   eslintPluginUnicorn.configs["flat/recommended"],
   ...tseslint.configs.recommended,
+  a11yPlugin.flatConfigs.recommended,
 
   // NOTE: File specific plugins/presents
   {

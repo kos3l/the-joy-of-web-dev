@@ -12,8 +12,11 @@ export default function Counter({
 
   const subtract = () => setCount((index) => index - 1);
   const meme = ["1", "2"];
+
   const t = meme.forEach((e) => console.log(e));
-  const e = 2;
+
+  const name = "Karolina";
+
   console.log(t);
 
   return (
@@ -25,6 +28,8 @@ export default function Counter({
       </div>
       <p className="text-red-500 font-bold">MEOW</p>
       <div className="counter-message">{children}</div>
+
+      <img src="cat.png" />
     </>
   );
 }
