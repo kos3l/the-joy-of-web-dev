@@ -1,7 +1,5 @@
 import { type ReactNode, useState } from 'react';
 
-import { Apple } from './apple';
-
 export default function Counter({
   children,
   count: initialCount,
@@ -21,8 +19,8 @@ export default function Counter({
         <pre>{count}</pre>
         <button onClick={add}>+</button>
       </div>
-      <Apple />
       <p className="text-red-500 font-bold">MEOW</p>
+
       <div className="counter-message">{children}</div>
     </>
   );

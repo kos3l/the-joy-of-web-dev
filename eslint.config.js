@@ -57,7 +57,7 @@ export default tseslint.config(
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: '.', // this loads <rootDir>/tsconfig.json to eslint
+          project: './src', // this loads <rootDir>/tsconfig.json to eslint
         },
         node: true,
       },
