@@ -1,10 +1,12 @@
 ---
 // Component Imports
-import Counter from "../components/counter";
+import { Apple } from '../components/apple';
+import Counter from '../components/counter';
 const someProperties = {
   count: 0,
 };
-import "../styles/global.css";
+
+import '../styles/global.css';
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -21,6 +23,7 @@ import "../styles/global.css";
       <Counter {...someProperties} client:visible>
         <h1 class="meow">Hello, React!</h1>
       </Counter>
+      <Apple />
     </main>
   </body>
 </html>

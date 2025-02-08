@@ -1,4 +1,6 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode, useState } from 'react';
+
+import { Apple } from './apple';
 
 export default function Counter({
   children,
@@ -11,13 +13,6 @@ export default function Counter({
   const add = () => setCount((index) => index + 1);
 
   const subtract = () => setCount((index) => index - 1);
-  const meme = ["1", "2"];
-
-  const t = meme.forEach((e) => console.log(e));
-
-  const name = "Karolina";
-
-  console.log(t);
 
   return (
     <>
@@ -26,10 +21,9 @@ export default function Counter({
         <pre>{count}</pre>
         <button onClick={add}>+</button>
       </div>
+      <Apple />
       <p className="text-red-500 font-bold">MEOW</p>
       <div className="counter-message">{children}</div>
-
-      <img src="cat.png" />
     </>
   );
 }
