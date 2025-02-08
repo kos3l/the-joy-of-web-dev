@@ -1,29 +1,31 @@
 ---
-// Component Imports
-const someProperties = {
-  count: 0,
-};
-
 import '../styles/global.css';
 
-import Counter from '@components/counter';
+import Texture from '@components/texture.astro';
+import RootLayout from 'src/layouts/root-layout.astro';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  </head>
-  <body>
-    <main>
-      <Counter {...someProperties} client:visible>
-        <h1 class="meow">Hello, React!</h1>
-      </Counter>
-    </main>
-  </body>
-</html>
+<!-- They need to see the text and information from far away, with possibly bad projector so try and use
+big letters -->
+<RootLayout title="The joy of web-development">
+  <div class="bg-indigo-200 flex items-center justify-center h-dvh">
+    <Texture />
+    <div>
+      <h1>Hello everyone!</h1>
+      <p>A small presentation from last year's Web-development Bachelor's degree graduate</p>
+      <p>By Karolina Kosinska</p>
+
+      <p>The plan:</p>
+      <ul>
+        <li>My journey through the education</li>
+        <li>Curiosity</li>
+        <li>Tools I can't work without</li>
+        <li>Debugging</li>
+        <li>Q&A</li>
+      </ul>
+    </div>
+  </div>
+</RootLayout>
