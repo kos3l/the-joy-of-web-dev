@@ -1,4 +1,4 @@
-import { type ReactNode, useState } from 'react';
+import { type ReactNode, useState } from "react";
 
 export default function Counter({
   children,
@@ -20,7 +20,7 @@ export default function Counter({
         <button onClick={add}>+</button>
       </div>
       <p className="text-red-500 font-bold">MEOW</p>
-
+      <div />
       <div className="counter-message">{children}</div>
     </>
   );
