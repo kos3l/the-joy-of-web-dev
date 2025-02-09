@@ -1,29 +1,23 @@
 ---
-import "../styles/global.css";
-
-import Texture from "@components/texture.astro";
+import Card from "@components/card/card.astro";
 import RootLayout from "src/layouts/root-layout.astro";
 ---
 
 <RootLayout title="The joy of web-development">
-  <div class="bg-stone-200 flex items-center justify-center h-dvh">
-    <Texture />
-    <div class="text-stone-900">
-      <h1>Hello everyone!</h1>
-      <p>
-        A small presentation from last year's Web-development Bachelor's degree
-        graduate
-      </p>
-      <p>By Karolina Kosinska</p>
-
-      <p>The plan:</p>
-      <ul>
-        <li>My journey through the education</li>
-        <li>Curiosity</li>
-        <li>Tools I can't work without</li>
-        <li>Debugging</li>
-        <li>Q&A</li>
-      </ul>
-    </div>
-  </div>
+  <Card>
+    <h1>Hello everyone!</h1>
+    <p>
+      A small presentation from last year's Web-development Bachelor's degree
+      graduate
+    </p>
+    <p>By Karolina Kosinska</p>
+    <p>The plan:</p>
+    <ul>
+      <li>My journey through the education</li>
+      <li>Curiosity</li>
+      <li>Tools I can't work without</li>
+      <li>Debugging</li>
+      <li>Q&A</li>
+    </ul>
+  </Card>
 </RootLayout>

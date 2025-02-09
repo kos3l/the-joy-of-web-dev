@@ -1,11 +1,15 @@
 ---
+import "../styles/global.css";
+
+import Footer from "@components/footer/footer.astro";
+import Texture from "@components/texture/texture.astro";
 interface Props {
   title: string;
 }
 const { title } = Astro.props;
 ---
 
-<html lang="en" class="bg-blue-900">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -13,10 +17,13 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
-    <main>
+  <body class="h-dvh w-full bg-stone-200 text-stone-300">
+    <Texture />
+    <main
+      class="h-[calc(100%-var(--footer-height))] overflow-scroll flex items-center justify-center flex-col"
+    >
       <slot />
     </main>
-    <footer>Footer</footer>
+    <Footer />
   </body>
 </html>

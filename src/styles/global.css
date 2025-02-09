@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+  --footer-height: 32px;
+}
